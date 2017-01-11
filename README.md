@@ -1,10 +1,10 @@
 ##Spring Mail Relay
 
 ###Outline
-Spring Mail Relay is a RESTful API starter service for sending mail. The idea is that the service will be public facing and can forward requests to an internal SMTP server (which is locked down behind your corporate firewall, which would otherwise be unavailable from your cloud application).
+Spring Mail Relay is a RESTful API starter service for sending mail. The idea is that the service will be public facing and can forward requests to an internal SMTP server; this would normally be locked down behind your corporate firewall and would otherwise be unavailable from your cloud application. This way only the mail relay service needs to granted access rather then every specific cloud application.
 
 ####cURL
-You can test the service with the below cURL command. Requires a request JSON file similar to above:
+You can test the service with the below cURL command. Requires a request JSON file similar to below:
 ```javascript
 	curl -u username:password -v -H "Content-Type: application/json" --data "@request.json" http://localhost:8080/mail-relay/send
 ```
